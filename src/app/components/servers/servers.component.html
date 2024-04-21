@@ -1,0 +1,26 @@
+<div class="">
+  <div class="font-medium text-lg">
+    <div class=" bg-white rounded-lg shadow text-center">Наши сервера</div>
+    <div class="p-3 mt-2 bg-white rounded-lg shadow space-y-3">
+      <div class="mt-2" pTooltip="Онлайн: {{servers[2].online}}" tooltipPosition="bottom">
+        <div class="mb-1">Сервер 1</div>
+        <p-progressBar [value]="servers[0].online" showValue="false" />
+      </div>
+      <div pTooltip="Онлайн: {{servers[1].online}}" tooltipPosition="bottom">
+        <div class="mb-1">Сервер 2</div>
+        <p-progressBar [value]="servers[1].online" showValue="false" />
+      </div>
+      <div pTooltip="Онлайн: {{servers[2].online}}" tooltipPosition="bottom">
+        <div class="mb-1">Сервер 3</div>
+        <p-progressBar [value]="servers[2].online" showValue="false" />
+      </div>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
+
+<!-- <div class="container mx-auto mt-3 bg-white rounded-2xl shadow flex flex-col text-2xl font-medium">
+
+</div> -->

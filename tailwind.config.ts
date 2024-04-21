@@ -5,7 +5,8 @@ export default {
     "./src/**/*.{html,js}"
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
   corePlugins: { preflight: false }
