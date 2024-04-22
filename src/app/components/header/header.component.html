@@ -1,5 +1,6 @@
-<div class="container mx-auto bg-white h-[60px] rounded-full mt-2 flex items-center font-medium text-lg shadow">
-  <div class="flex items-center select-none">
+<div class="container mx-auto bg-white h-[60px] rounded-full mt-2 flex justify-between md:justify-normal items-center font-medium text-lg shadow">
+  <!-- Хедер для больших экранов -->
+  <div class="hidden md:flex items-center select-none">
     <img 
       src="../../../assets/head-logo.png"
       alt="logo"
@@ -7,16 +8,23 @@
     >
     <span class="font-semibold lg:text-xl text-center">DeadZone Supply</span>
   </div>
+  <!-- Гамбургер -->
+  <div class="pl-5 leading-[0] md:hidden" (click)="toggleBar()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </div>
 
-  <div class="flex space-x-5 ml-5 lg:ml-20 grow select-none">
-    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer">Товары</span>
-    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer">Новости</span>
-    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer">FAQ</span>
+  <!-- Меню для больших экранов -->
+  <div class="hidden md:flex space-x-2 md:space-x-5 ml-3 lg:ml-20 grow select-none">
+    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer" routerLink="products">Товары</span>
+    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer" routerLink="news">Новости</span>
+    <span class="hover:bg-slate-100 hover:rounded-md p-2 cursor-pointer" routerLink="faq">FAQ</span>
   </div>
 
   <div class="flex items-center space-x-1 lg:space-x-5 mr-3 text-lg">
     <div class="flex items-center space-x-1 lg:space-x-5">
-      <span>Баланс: 0₽</span>
+      <span class="text-center">Баланс: 0₽</span>
       <p-avatar 
       image="https://avatars.cloudflare.steamstatic.com/9784efc932f526a6057b18e74b195dac6267208e_full.jpg" 
       class="h-[48px]" 
@@ -28,4 +36,10 @@
       Войти
     </div>
   </div>
+</div>
+
+<div class="container mx-auto flex md:hidden flex-col rounded-3xl gap-y-5 py-3 font-medium shadow bg-white items-center mt-1 drop_animate" [style.display]="showNavBar ? 'flex' : 'none'">
+  <div>Главная</div>
+  <div>Новости</div>
+  <div>FAQ</div>
 </div>

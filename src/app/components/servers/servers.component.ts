@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { TooltipModule } from 'primeng/tooltip';
@@ -8,6 +9,7 @@ import { TooltipModule } from 'primeng/tooltip';
   imports: [
     ProgressBarModule,
     TooltipModule,
+    NgFor,
   ],
   templateUrl: './servers.component.html',
   styleUrl: './servers.component.css'
